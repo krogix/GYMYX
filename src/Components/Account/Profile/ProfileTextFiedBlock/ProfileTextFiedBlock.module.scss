@@ -1,0 +1,142 @@
+@import '@/styles/mixins.scss';
+
+.profile-textfied-block {
+  position: relative;
+
+  &__input-disable {
+    color: gray;
+  }
+
+  &__input,
+  &__input-disable {
+    font-weight: 500;
+    line-height: 135%;
+    background: transparent;
+    resize: none;
+    border: none;
+    background: var(--white-transperent, rgba(255, 255, 255, 0.1));
+    width: 100%;
+    font-family: '__Montserrat_b1da2a', '__Montserrat_Fallback_b1da2a';
+
+    @include media-breakpoint-down(md) {
+      height: 87px;
+      padding: 9px 12px 12px 18px;
+      border-radius: 7px;
+      font-size: 12px;
+    }
+
+    @include media-breakpoint-between(md, xl) {
+      height: 300px;
+      border-radius: 20px;
+      padding: 15px 25px 25px 25px;
+      font-size: 20px;
+    }
+
+    @include media-breakpoint-between(xl, xxxl) {
+      height: 325px;
+      padding: 20px 30px 30px 30px;
+      border-radius: 20px;
+      font-size: 20px;
+    }
+
+    @include media-breakpoint-up(xxxl) {
+      height: 440px;
+      border-radius: 25.752px;
+      padding: 20px 40px 40px 40px;
+      font-size: 26px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--white-transperent-2, rgba(255, 255, 255, 0.4));
+    }
+  }
+
+  &__input {
+    &:not(:placeholder-shown) {
+      color: #fff;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    background: var(--blue-base, #294ae7);
+    box-shadow: 0px 0px 27px 30px rgb(22 23 26 / 8%);
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #5b74e9;
+      transition: 0.3s ease;
+    }
+
+    &:active {
+      background: #8e9eed;
+      transition: 0.3s ease;
+    }
+
+    @include media-breakpoint-down(md) {
+      bottom: 12px;
+      right: 12px;
+      width: 24px;
+      height: 24px;
+      padding: 5px;
+    }
+
+    @include media-breakpoint-between(md, xxl) {
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      padding: 20px;
+    }
+
+    @include media-breakpoint-between(xxl, xxxl) {
+      bottom: 30px;
+      right: 30px;
+      width: 67px;
+      height: 67px;
+      padding: 15px;
+    }
+
+    @include media-breakpoint-up(xxxl) {
+      bottom: 40px;
+      right: 40px;
+      width: 90px;
+      height: 90px;
+      padding: 20px;
+    }
+  }
+
+  &__btn-icon {
+    @include media-breakpoint-down(md) {
+      width: 10px;
+      height: 8px;
+    }
+
+    @include media-breakpoint-between(md, xxl) {
+      width: 17px;
+      height: 18px;
+    }
+
+    @include media-breakpoint-between(xxl, xxxl) {
+      width: 27px;
+      height: 24px;
+    }
+
+    @include media-breakpoint-up(xxxl) {
+      width: 37px;
+      height: 32px;
+    }
+  }
+}

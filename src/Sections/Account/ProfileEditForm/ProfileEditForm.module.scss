@@ -1,0 +1,201 @@
+@import '@/styles/mixins.scss';
+
+.profile-edit-form {
+  position: relative;
+
+  @include media-breakpoint-down(lg) {
+  }
+
+  &__canvas {
+    opacity: 0;
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    min-width: 200px;
+    min-height: 200px;
+    max-height: 200px;
+    position: absolute;
+  }
+
+  &__data {
+    display: grid;
+
+    @include media-breakpoint-down(md) {
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include media-breakpoint-between(md, xxl) {
+      grid-template-columns: 200px auto;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      grid-template-columns: 308px auto;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__data-col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 587px;
+
+    > div:not(:last-of-type) {
+      @include media-breakpoint-down(xl) {
+        margin-bottom: 20px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__error-field {
+    text-align: center;
+    color: red;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  }
+
+  &__avatar {
+    display: flex;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    @include media-breakpoint-down(md) {
+      width: 150px;
+      height: 150px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include media-breakpoint-between(md, xxl) {
+      width: 200px;
+      height: 200px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 308px;
+      height: 308px;
+    }
+
+    input {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__avatar-edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000087;
+    z-index: 1;
+    transition: 0.3s ease;
+  }
+
+  &__avatar-edit &__edit-icon {
+    @include media-breakpoint-down(lg) {
+      width: 20px;
+      height: 20px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__date-birth {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    color: #fff;
+
+  }
+
+  &__date-birth-edit-icon {
+    color: #fff;
+  }
+
+  &__contacts {
+    position: relative;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 24px;
+    }
+
+    @include media-breakpoint-between(md, xxl) {
+      margin-bottom: 35px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__contacts-title {
+    color: var(--white, #fff);
+    font-weight: 600;
+    line-height: 113%;
+
+    @include media-breakpoint-down(md) {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    @include media-breakpoint-between(md, xxl) {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__row {
+    display: grid;
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-breakpoint-down(xl) {
+      gap: 20px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      gap: 40px;
+    }
+  }
+}

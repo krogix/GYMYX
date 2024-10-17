@@ -1,0 +1,25 @@
+@import "@/styles/mixins.scss";
+
+.gid-item {
+  position: relative;
+
+  &__wrapper {
+    display: grid;
+    width: 100%;
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @include media-breakpoint-between(lg, xxl) {
+      grid-template-columns: auto 250px;
+      gap: 40px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      grid-template-columns: auto 360px;
+      gap: 40px;
+    }
+  }
+}

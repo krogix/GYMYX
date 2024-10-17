@@ -1,0 +1,16 @@
+@import "@/styles/mixins.scss";
+
+.grid-list {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-down(lg) {
+      gap: 30px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      gap: 40px;
+    }
+  }
+}

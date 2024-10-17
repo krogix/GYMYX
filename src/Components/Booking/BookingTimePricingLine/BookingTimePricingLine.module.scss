@@ -1,0 +1,20 @@
+@import "@/styles/mixins.scss";
+
+.booking-time-pricing-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+
+  @include media-breakpoint-down(lg) {
+    gap: 8px;
+  }
+
+  @include media-breakpoint-between(lg, xxl) {
+    gap: 24px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    gap: 34px;
+  }
+}

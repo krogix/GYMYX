@@ -1,0 +1,97 @@
+@import "@/styles/mixins.scss";
+
+.gid-item-info {
+  @include media-breakpoint-down(lg) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    background: var(--white-transperent, rgba(255, 255, 255, 0.1));
+    box-shadow: 0px 0px 21px 0px rgba(22, 23, 26, 0.6);
+
+    @include media-breakpoint-down(lg) {
+      padding: 14px 18px;
+      border-radius: 15px;
+    }
+
+    @include media-breakpoint-between(lg, xxl) {
+      padding: 20px 30px;
+      border-radius: 20px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      padding: 35px 40px 40px 40px;
+      border-radius: 30px;
+    }
+
+    &:not(:last-child) {
+      @include media-breakpoint-between(lg, xxl) {
+        margin-bottom: 20px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__item-text {
+    color: var(--white, #fff);
+    font-weight: 500;
+    line-height: 135%;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 12px;
+    }
+
+    @include media-breakpoint-between(lg, xxl) {
+      font-size: 18px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      font-size: 26px;
+    }
+  }
+
+  &__item-content {
+  }
+
+  &__item-tag {
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    line-height: 135%;
+    width: fit-content;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 12px;
+      padding: 2px 15px;
+      border-radius: 17.837px;
+      margin-bottom: 8px;
+      border: 1px solid var(--white, #fff);
+    }
+
+    @include media-breakpoint-between(lg, xxl) {
+      font-size: 18px;
+      padding: 3px 20px;
+      border-radius: 30px;
+      margin-bottom: 15px;
+      border: 2px solid var(--white, #fff);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      font-size: 26px;
+      padding: 5px 30px;
+      border-radius: 41px;
+      margin-bottom: 18px;
+      border: 2px solid var(--white, #fff);
+    }
+  }
+}
