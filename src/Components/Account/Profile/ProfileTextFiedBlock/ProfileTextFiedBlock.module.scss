@@ -16,7 +16,6 @@
     border: none;
     background: var(--white-transperent, rgba(255, 255, 255, 0.1));
     width: 100%;
-    font-family: '__Montserrat_b1da2a', '__Montserrat_Fallback_b1da2a';
 
     @include media-breakpoint-down(md) {
       height: 87px;
